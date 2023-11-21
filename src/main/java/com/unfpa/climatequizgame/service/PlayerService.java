@@ -17,6 +17,9 @@ public class PlayerService {
     public Players savePlayers(Players players){
         return playerRepository.save(players);
     }
+    public Optional<Players> getPlayerById(Long id) {
+        return playerRepository.findById(id);
+    }
     public Players updatePlayers(long id,Players players){
         Optional<Players> existPLayer = playerRepository.findById(id);
         if (existPLayer.isPresent()){
