@@ -20,4 +20,6 @@ public class Team extends AbstractModel{
 
     @OneToMany(mappedBy = "team")
     List<Players> playersList;
+
+    int score;
 }
